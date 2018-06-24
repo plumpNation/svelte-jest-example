@@ -5,8 +5,9 @@ A small project to figure out the easiest way to use Jest to test Svelte compone
 
 ## Dependencies
 
-- **Svelte**: https://svelte.technology/guide
-- **Jest**: https://facebook.github.io/jest/
+- **jest**: https://facebook.github.io/jest/
+- **svelte**: https://svelte.technology/guide
+- **svelte-jest**: https://github.com/ktsn/svelte-jest
 
 ## Setup
 
@@ -19,3 +20,11 @@ yarn
 ```shell
 yarn test
 ```
+
+## svelte-jest
+
+Svelte jest is basically just a very smaller wrapper around the svelte compile
+functionality that ties it to the Jest `process` API.
+
+The Svelte compiler is listed as a peer dependency, so you must install your
+own version of it.

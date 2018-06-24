@@ -1,9 +1,21 @@
 const MyButton = require('./components/MyButton.svelte');
 
-function sum(a, b) {
-    return a + b;
-}
+let target;
+let component;
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
+describe('MyButton Component', () => {
+    beforeEach(() => {
+        target = document.createElement('div')
+
+        component = new MyButton({ target });
+    });
+
+    it('should render', () => {
+        const text = 'Hello world';
+        const expected = `<button>${text}</button>`;
+
+        component.set({ text });
+
+        expect(target.innerHTML).toEqual(expected);
+    });
 });
